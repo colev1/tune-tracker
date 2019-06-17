@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {fetchPopularTracks} from '../thunks/fetchPopularTracks';
 import PropTypes from 'prop-types';
+import Track from '../components/Track'
 
 
 class Main extends Component {
@@ -11,9 +12,13 @@ class Main extends Component {
   }
 
   render() {
+    const tracks = this.props.tracks.map(track => {
+      // return (<div key={track.idTrack}> {track.strTrack} </div>)
+      return <Track track={track} />
+    })
     return(
-      <div>
-        Main
+      <div className='tracks-container'>
+        {tracks}
       </div>
     )
   }
