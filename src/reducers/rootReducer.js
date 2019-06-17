@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-// import simpleReducer from './simpleReducer';
+import {tracksReducer} from './tracksReducer';
 
 export default combineReducers({
-//  simpleReducer
+  tracksReducer
 });
