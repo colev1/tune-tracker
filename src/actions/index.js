@@ -1,6 +1,9 @@
-export const searchSuccess = (movies) => {
-	return {
+export const searchSuccess = (tracks) => ({
 		type: 'SEARCH_SUCCESS',
-		movies
-	}
-}
+		tracks
+})
+
+export const showTracks = (tracks) => ({
+    type: 'SHOW_TRACKS',
+    tracks
+})
