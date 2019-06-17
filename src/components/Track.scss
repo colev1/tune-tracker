@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 
 .tracks-container {
   display: grid;
@@ -8,7 +10,11 @@
 }
 
 .track {
-  // border: solid black 2px;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .description {
