@@ -1,13 +1,9 @@
-export const searchSuccess = (tracks) => {
-	return {
+export const searchSuccess = (tracks) => ({
 		type: 'SEARCH_SUCCESS',
 		tracks
-	}
-}
+})
 
-export const showTracks = (tracks) => {
-  return {
+export const showTracks = (tracks) => ({
     type: 'SHOW_TRACKS',
     tracks
-  }
-}
+})

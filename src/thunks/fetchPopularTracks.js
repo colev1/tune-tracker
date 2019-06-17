@@ -1,19 +1,20 @@
-import {showTracks} from '../actions';
+import { showTracks } from '../actions';
 
 
 
-export const fetchPopularTracks = (id) => {
-  const url = `theaudiodb.com/api/v1/json/1/mostloved.php?format=track`;
+export const fetchPopularTracks = (url) => {
+  console.log('url',url)
   return async (dispatch) => {
     try {
       const response = await fetch(url)
+      console.log(response.ok)
       if (!response.ok) {
         throw Error(response.statusText)
       }
       const result = await response.json()
-      console.log(result)
-      // const tracks = result.data;
-      dispatch(showTracks(result))
+      console.log('result',result)
+      const tracks = result.loved;
+      dispatch(showTracks(tracks))
     } catch (err) {
       console.log(err)
     }

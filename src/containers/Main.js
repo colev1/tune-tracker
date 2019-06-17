@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 
 class Main extends Component {
   async componentDidMount() {
-    await this.props.fetchPopularTracks();
+    const url = `http://theaudiodb.com/api/v1/json/1/mostloved.php?format=track`    
+    await this.props.fetchPopularTracks(url);
   }
 
   render() {
@@ -18,10 +19,18 @@ class Main extends Component {
   }
 }
 
+Main.propTypes = {
+  tracks: PropTypes.array,
+  fetchPopularTracks: PropTypes.func
+}
+
+const mapStateToProps = (state) => ({
+  tracks: state.tracks
+})
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchPopularTracks: () => dispatch(fetchPopularTracks)
+  fetchPopularTracks: (url) => dispatch(fetchPopularTracks(url))
 })
 
 
-export default connect(null, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
