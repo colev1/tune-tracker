@@ -2,9 +2,20 @@
 .tracks-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: 300px;
+  // grid-template-rows: 300px;
+  grid-gap: 4px 8px;
+  margin: 4px;
 }
 
 .track {
-  border: solid black 2px;
+  // border: solid black 2px;
+}
+
+.description {
+  position: absolute;
+  z-index: 2;
+}
+
+img {
+  width: 100%;
 }

@@ -1,4 +1,5 @@
 import { showTracks } from '../actions';
+import cleanTracks from '../helpers/cleanTracks'
 
 export const fetchPopularTracks = (url) => {
   return async (dispatch) => {
@@ -8,7 +9,7 @@ export const fetchPopularTracks = (url) => {
         throw Error(response.statusText)
       }
       const result = await response.json()
-      const tracks = result.loved;
+      const tracks = cleanTracks(result)
       dispatch(showTracks(tracks))
     } catch (err) {
       console.log(err)

@@ -13,8 +13,7 @@ class Main extends Component {
 
   render() {
     const tracks = this.props.tracks.map(track => {
-      // return (<div key={track.idTrack}> {track.strTrack} </div>)
-      return <Track track={track} />
+      return <Track track={track} key={track.id} />
     })
     return(
       <div className='tracks-container'>
