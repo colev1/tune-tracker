@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux'
 import Search from '../containers/Search';
+import Header from '../containers/Header';
+
 
 // import { simpleAction } from './actions/simpleAction';
 
@@ -9,6 +11,7 @@ import Search from '../containers/Search';
 function App() {
   return (
     <div className="App">
+      <Header />
       <Search />
     </div>
   );
