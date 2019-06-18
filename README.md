@@ -7,6 +7,9 @@ This application uses the Audio DB API to fetch information about the 50 most po
 ## API 
 * AudioDB: https://www.theaudiodb.com/api_guide.php
 
+## Screenshot: 
+![App screenshot](./app.png)
+
 
 ## Tech Stack:
 * React Redux
