@@ -4,7 +4,8 @@ The goal is to build a responsive web app using react/redux, node and graphql [i
 ## Description:
 This application uses the Audio DB API to fetch information about the 50 most popular tracks of the time. The tracks are displayed on the page in a responsive layout.
 
-* Live site: 
+## API 
+* https://www.theaudiodb.com/api_guide.php
 
 
 ## Tech Stack:
