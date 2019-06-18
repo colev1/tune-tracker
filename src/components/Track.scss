@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-
-
 .tracks-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  // grid-template-rows: 300px;
-  grid-gap: 4px 8px;
-  margin: 4px;
+  grid-gap: 8px 8px;
+  margin: 8px;
 }
 
 .track {
-  font-family: 'Quicksand', sans-serif;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -24,4 +19,6 @@
 
 img {
   width: 100%;
+  border-radius: 20px;
+
 }

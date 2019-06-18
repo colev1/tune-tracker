@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { connect } from 'react-redux'
 import Search from '../containers/Search';
 import Header from '../containers/Header';
