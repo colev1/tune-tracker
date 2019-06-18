@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Header from './Header';
 import Main from './TrackContainer';
 
@@ -14,4 +13,4 @@ function App() {
 }
 
 
-export default connect()(App);
+export default App;

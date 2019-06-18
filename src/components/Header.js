@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 class Header extends Component {
   render() {
     return (
-      <h1>
-        top 50 tracks of all time:
-      </h1>
+      <div className="header-container">
+        <h1>
+          top 50 tracks of all time:
+        </h1>
+        <p> source: theaudiodb.com </p>
+      </div>
     )
   }
 }
 
-export default connect()(Header);
+export default Header;
