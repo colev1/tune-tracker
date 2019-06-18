@@ -15,7 +15,8 @@ body {
 .loading-container {
   align-items: center;
   display: flex;
-  font-size: 44px;
+  font-size: 32px;
+  color: $pink;
   height: 90vh;
   justify-content: center;
 }
@@ -35,7 +36,7 @@ body {
 
 .track:hover {
   .description {
-    background-color: #b48291;
+    background-color: $pink;
     color: black;
     max-width: 200px;
     opacity: 1;

@@ -1,0 +1,9 @@
+@media screen and (max-width: 415px) {
+  .tracks-container {
+    grid-gap: 12px 4px;
+  }
+
+  .description {
+    display: none;
+  }
+}
