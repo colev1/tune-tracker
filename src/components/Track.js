@@ -1,10 +1,9 @@
 import React from 'react';
-import './Track.scss'
-import disc from '../disc.png'
+import disc from '../disc.png';
 
-const Track = ({track}) => {
+const Track = ({ track }) => {
   let { name, artist, album, id, image } = track;
-  if(!image) {
+  if (!image) {
     image = disc;
   }
   return (
@@ -14,7 +13,7 @@ const Track = ({track}) => {
         <p> Artist: {artist}  </p>
         <p> Album: {album} </p>
       </div>
-        <img src={image} alt="album"/>
+      <img src={image} alt="album" />
     </div>
   )
 }

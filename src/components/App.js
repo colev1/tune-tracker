@@ -1,19 +1,16 @@
 import React from 'react';
-import './App.scss';
-import { connect } from 'react-redux'
-import Header from '../containers/Header';
-import Main from '../containers/Main';
+import Header from './Header';
+import Main from './TrackContainer';
 
 
 function App() {
   return (
     <div className="App">
       <Header />
-      {/* <Search /> */}
       <Main />
     </div>
   );
 }
 
 
-export default connect()(App);
+export default App;

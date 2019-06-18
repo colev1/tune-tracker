@@ -1,17 +1,24 @@
 .tracks-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 1% 1%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 4%;
-  
+}
+
+body {
+  background-color: $light-blue;
+  font-family: $font;
+  padding: 0px;
+  text-align: center;
 }
 
 .loading-container {
-  height: 90vh;
-  font-size: 44px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  font-size: 32px;
+  color: $pink;
+  height: 90vh;
+  justify-content: center;
 }
 
 .track {
@@ -21,19 +28,18 @@
   justify-content: center;
 }
 
-
 .description {
-  position: absolute;
   opacity: 0;
+  position: absolute;
   z-index: 2;
 }
 
 .track:hover {
   .description {
-    opacity: 1;
+    background-color: $pink;
     color: black;
-    background-color: #B48291;
     max-width: 200px;
+    opacity: 1;
   }
 }
 
