@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return(
       <h1>
-        Tune Tracker
+        top 50 tracks of all time!! 
       </h1>
     )
   }

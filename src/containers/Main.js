@@ -6,6 +6,7 @@ import Track from '../components/Track'
 
 
 class Main extends Component {
+
   async componentDidMount() {
     const url = `http://theaudiodb.com/api/v1/json/1/mostloved.php?format=track`    
     await this.props.fetchPopularTracks(url);
@@ -15,11 +16,22 @@ class Main extends Component {
     const tracks = this.props.tracks.map(track => {
       return <Track track={track} key={track.id} />
     })
-    return(
-      <div className='tracks-container'>
-        {tracks}
-      </div>
-    )
+
+    if(this.props.isLoading) {
+      return (
+        <div className="loading-container">
+          loading tracks...
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <div className='tracks-container'>
+            {tracks}
+          </div>
+        </div>
+      )
+    }
   }
 }
 
@@ -29,7 +41,8 @@ Main.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  tracks: state.tracks
+  tracks: state.tracks,
+  isLoading: state.isLoading
 })
 
 const mapDispatchToProps = (dispatch) => ({

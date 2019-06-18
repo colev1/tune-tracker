@@ -3,3 +3,9 @@ export const showTracks = (tracks) => ({
     tracks
 })
 
+export const isLoading = (bool) => {
+	return {
+		type: 'IS_LOADING',
+		isLoading: bool
+	}
+}

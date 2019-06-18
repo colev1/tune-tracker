@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import {tracksReducer} from './tracksReducer';
+import {tracksReducer, isLoading} from './tracksReducer';
 
 
 const rootReducer = combineReducers({
-  tracks: tracksReducer
+  tracks: tracksReducer,
+  isLoading: isLoading
 });
 
 export default rootReducer;

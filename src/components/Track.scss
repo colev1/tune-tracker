@@ -1,8 +1,17 @@
 .tracks-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 8px 8px;
-  margin: 8px;
+  grid-gap: 1% 1%;
+  margin: 4%;
+  
+}
+
+.loading-container {
+  height: 90vh;
+  font-size: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .track {
@@ -12,13 +21,23 @@
   justify-content: center;
 }
 
+
 .description {
   position: absolute;
+  opacity: 0;
   z-index: 2;
+}
+
+.track:hover {
+  .description {
+    opacity: 1;
+    color: black;
+    background-color: #B48291;
+    max-width: 200px;
+  }
 }
 
 img {
   width: 100%;
   border-radius: 20px;
-
 }

@@ -10,9 +10,9 @@ const Track = ({track}) => {
   return (
     <div className='track' key={id}>
       <div className="description">
-        <p> {name} </p>
-        <p> {artist}  </p>
-        <p> {album} </p>
+        <p> Track: {name} </p>
+        <p> Artist: {artist}  </p>
+        <p> Album: {album} </p>
       </div>
         <img src={image} alt="album"/>
     </div>
