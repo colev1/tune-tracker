@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchPopularTracks } from '../thunks/fetchPopularTracks';
 import PropTypes from 'prop-types';
-import Track from '../components/Track';
+import Track from './Track';
 
 
 class TrackContainer extends Component {

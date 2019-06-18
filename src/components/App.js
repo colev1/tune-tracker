@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import Header from '../containers/Header';
-import Main from '../containers/TrackContainer';
+import { connect } from 'react-redux';
+import Header from './Header';
+import Main from './TrackContainer';
 
 
 function App() {
