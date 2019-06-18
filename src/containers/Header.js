@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import './Header.scss'
 
 class Header extends Component {
   render() {
     return(
-      <div>
-        Tune Tracker
-      </div>
+      <h1>
+        top 50 tracks of all time!! 
+      </h1>
     )
   }
 }

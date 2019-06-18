@@ -3,7 +3,7 @@ const cleanTracks = (tracks) => {
     id: track.idTrack,
     name: track.strTrack,
     album: track.strAlbum,
-    artist: track.strAlbum,
+    artist: track.strArtist,
     image: track.strTrackThumb
   }))
 }
