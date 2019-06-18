@@ -1,12 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Header.scss'
 
 class Header extends Component {
   render() {
-    return(
+    return (
       <h1>
-        top 50 tracks of all time!! 
+        top 50 tracks of all time:
       </h1>
     )
   }

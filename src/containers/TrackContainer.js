@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {fetchPopularTracks} from '../thunks/fetchPopularTracks';
+import { fetchPopularTracks } from '../thunks/fetchPopularTracks';
 import PropTypes from 'prop-types';
-import Track from '../components/Track'
+import Track from '../components/Track';
 
 
-class Main extends Component {
+class TrackContainer extends Component {
 
   async componentDidMount() {
-    const url = `http://theaudiodb.com/api/v1/json/1/mostloved.php?format=track`    
+    const url = `http://theaudiodb.com/api/v1/json/1/mostloved.php?format=track`
     await this.props.fetchPopularTracks(url);
   }
 
@@ -17,7 +17,7 @@ class Main extends Component {
       return <Track track={track} key={track.id} />
     })
 
-    if(this.props.isLoading) {
+    if (this.props.isLoading) {
       return (
         <div className="loading-container">
           loading tracks...
@@ -35,7 +35,7 @@ class Main extends Component {
   }
 }
 
-Main.propTypes = {
+TrackContainer.propTypes = {
   tracks: PropTypes.array,
   fetchPopularTracks: PropTypes.func
 }
@@ -50,4 +50,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(TrackContainer);
