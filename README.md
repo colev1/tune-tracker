@@ -15,10 +15,11 @@ This application uses the Audio DB API to fetch information about the 50 most po
 ## Setup Instructions
 
 * Clone the repository 
-```$git clone https://github.com/colev1/tune-tracker```
-* Cd into the directory
+```$ git clone https://github.com/colev1/tune-tracker```
+* `$ cd tune-tracker`
 * Install dependencies `npm install`
 * Run `npm start`
+* Open browser on http://localhost:3000/
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
